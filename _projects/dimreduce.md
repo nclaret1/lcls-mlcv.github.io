@@ -54,14 +54,4 @@ Crystallographic diffraction patterns are inherently structured objects residing
 %}
 
 
-### Sparse Recovery Error
-
-{% include figure.liquid 
-    path="assets/img/projects/dimreduce/example_1.png"
-    title="Sparse Component Recovery Error"
-    class="img-fluid rounded z-depth-1"
-    caption="Normalized recovery error of the sparse component as a function of the RPCA rank parameter `n_components`, with error defined as $\\frac{\\lVert \\mathbf{S}_{\\text{true}} - \\hat{\\mathbf{S}} \\rVert_F}{\\lVert \\mathbf{S}_{\\text{true}} \\rVert_F}$."
-%}
-
-
 Building on this foundation, the second stage of the project extends the same decomposition algorithm to incorporate reciprocal-space structure, detector geometry, and symmetry constraints directly into its update rules. This requires adapting projection steps, thresholding operators, and distance metrics to respect the non-Euclidean geometry and group-theoretic invariances inherent to crystallographic data. Implemented within a large-scale optimization framework, the resulting geometry-aware version of the algorithm aims to preserve physically meaningful relationships among Bragg peaks and background features while remaining compatible with high-throughput operation.
